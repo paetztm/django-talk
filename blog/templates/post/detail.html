@@ -5,5 +5,6 @@
 {% block content %}
     <h1>{{ post.title }}</h1>
     <p class="date">Published {{ post.publish }} by {{ post.author }}</p>
+    <p><a href="{% url "blog:post_share" post.id %}">Share this post</a></p>
     {{ post.body|linebreaks }}
 {% endblock %}
